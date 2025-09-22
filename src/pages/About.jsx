@@ -1,77 +1,131 @@
 import React from "react";
+import { Grid, Box, Typography, Button, List, ListItem } from "@mui/material";
 
-export default function About() {
-  const styles = {
-    section: {
-      backgroundColor: "#F7F7F5",
-      padding: "4rem 2rem",
-    },
-    title: {
-      fontSize: "2rem",
-      fontWeight: "bold",
-      textAlign: "center",
-      color: "#111827",
-      marginBottom: "2rem",
-    },
-    content: {
-      display: "flex",
-      flexWrap: "wrap",
-      alignItems: "center",
-      justifyContent: "center",
-      gap: "2rem",
-      maxWidth: "1000px",
-      margin: "0 auto",
-    },
-    textBox: {
-      flex: "1 1 300px",
-      color: "#111827",
-      fontSize: "1.1rem",
-      lineHeight: "1.6",
-    },
-    list: {
-      marginTop: "1rem",
-      paddingLeft: "1.2rem",
-    },
-    listItem: {
-      marginBottom: "0.5rem",
-      backgroundColor: "#E7D8C9",
-      padding: "0.5rem 1rem",
-      borderRadius: "8px",
-      fontWeight: "500",
-    },
-    image: {
-      flex: "1 1 300px",
-      backgroundColor: "#D4BBA0",
-      height: "250px",
-      borderRadius: "12px",
-      display: "flex",
-      alignItems: "center",
-      justifyContent: "center",
-      color: "#111827",
-      fontWeight: "bold",
-      fontSize: "1.2rem",
-    },
-  };
+import Foto2 from "../img/Foto2.png";
 
+export default function About({ dark }) {
   return (
-    <section style={styles.section}>
-      <h2 style={styles.title}>Sobre Mí</h2>
-      <div style={styles.content}>
-        <div style={styles.textBox}>
-          <p>
-            Soy desarrollador/a con experiencia en construir interfaces y
-            productos escalables.
-          </p>
-          <ul style={styles.list}>
-            <li style={styles.listItem}>Frontend: React, JS</li>
-            <li style={styles.listItem}>Diseño: Figma, prototipado</li>
-            <li style={styles.listItem}>Infraestructura: Netlify, Vercel</li>
-            <li style={styles.listItem}>Idiomas: Español (nativo), Inglés (avanzado)</li>
-            <li style={styles.listItem}>Años de Experiencia: 3 años en el rubro del desarrollo</li>
-          </ul>
-        </div>
-        <div style={styles.image}>Imagen</div>
-      </div>
-    </section>
+    <Box
+      sx={{
+        backgroundColor: dark ? "#e8e9f3" : "#F7F7F5",
+        padding: { xs: "2rem 1rem", md: "6rem 8rem" },
+      }}
+    >
+      {/* Título animado */}
+      <Typography
+        variant="h2"
+        sx={{
+          fontSize: { xs: "2.5rem", md: "4rem" },
+          fontWeight: "bold",
+          color: "#D4BBA0",
+          whiteSpace: "nowrap",
+          overflow: "hidden",
+          borderRight: "2px solid #111827",
+          width: "0",
+          margin: "0 auto",
+          marginBottom: "3rem",
+          display: "block",
+          textAlign: "center",
+          animation:
+            "typing 2s steps(9) forwards, blink 0.7s step-end 3",
+          "@keyframes typing": {
+            "0%": { width: "0" },
+            "100%": { width: "9ch" }, // número de caracteres de "Sobre Mí_"
+          },
+          "@keyframes blink": {
+            "0%": { borderColor: "#111827" },
+            "100%": { borderColor: "transparent" },
+          },
+        }}
+      >
+        Sobre Mí_
+      </Typography>
+
+      {/* Contenido */}
+      <Grid
+        container
+        spacing={4}
+        alignItems="center"
+        justifyContent="center"
+        sx={{ maxWidth: "1000px", margin: "3rem auto 0" }}
+      >
+        {/* Texto */}
+        <Grid item xs={12} md={6}>
+          <Typography
+            sx={{
+              color: "#111827",
+              fontSize: "1.1rem",
+              lineHeight: "1.6",
+              marginBottom: "1rem",
+            }}
+          >
+     Como desarrolladora en constante aprendizaje, busco mejorar cada día mis habilidades para construir proyectos escalables y con impacto.
+          </Typography>
+
+          <List sx={{ paddingLeft: "0" }}>
+            {[
+              "Nombre:  Luesbelin Mejia",
+              "Fecha de nacimiento: Septiembre 12, 2002",
+              "Dirección: Honduras, Tegucigalpa",
+              "Correo electrónico: luesbelinmejia935@gmail.com",
+              "Teléfono: +504 9809-2480",
+              "Idiomas: Español (nativo), Inglés (Básico)",
+              "Años de Experiencia: 1 años en el rubro del desarrollo",
+            ].map((item, index) => (
+              <ListItem
+                key={index}
+                sx={{
+                  backgroundColor: "#E7D8C9",
+                  borderRadius: "8px",
+                  marginBottom: "0.5rem",
+                  fontWeight: 500,
+                  padding: "0.5rem 1rem",
+                  display: "block",
+                  listStyleType: "disc",
+                }}
+              >
+                {item}
+              </ListItem>
+            ))}
+          </List>
+
+          <Button
+            href="/CV.pdf"
+            variant="outlined"
+            sx={{
+              border: "2px solid #111827",
+              color: "#111827",
+              padding: "0.8rem 1.5rem",
+              borderRadius: "8px",
+              fontWeight: "bold",
+              display: "flex",
+
+              "&:hover": {
+                border: "2px solid #111827",
+                backgroundColor: "rgba(17, 24, 39, 0.04)",
+              },
+            }}
+          >
+            Descargar CV
+          </Button>
+        </Grid>
+
+        {/* Imagen */}
+        <Grid item xs={12} md={6}>
+          <Box
+            component="img"
+            src={Foto2}
+            alt="Foto personal"
+            sx={{
+              width: "100%",
+              maxWidth: "350px",
+              borderRadius: "12px",
+              display: "block",
+              margin: "0 auto",
+            }}
+          />
+        </Grid>
+      </Grid>
+    </Box>
   );
 }

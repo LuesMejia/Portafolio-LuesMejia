@@ -5,8 +5,7 @@ import {
   Typography,
   Button,
   Paper,
-  useTheme,
-  useMediaQuery,
+
   IconButton,
   Fade
 } from "@mui/material";
@@ -15,9 +14,9 @@ import { ArrowBackIos, ArrowForwardIos } from "@mui/icons-material";
 import Foto from "../img/Foto.png";
 import Foto2 from "../img/Foto2.png";
 
-export default function Home() {
-  const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
+export default function Home({ dark, setDark }) {
+
+
   const [currentSlide, setCurrentSlide] = useState(0);
   const [text, setText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
@@ -179,7 +178,7 @@ export default function Home() {
   return (
     <Box
       sx={{
-        backgroundColor: "#F7F7F5",
+        backgroundColor: dark ? "#e8e9f3" : "#F7F7F5",
         minHeight: "65vh",
         display: "flex",
         alignItems: "center",

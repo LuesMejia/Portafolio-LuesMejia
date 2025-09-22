@@ -46,25 +46,41 @@ const projectsSample = [
   },
 ];
 
-export default function Projects() {
+export default function Projects({ dark, setDark }) {
   return (
     <Box
       sx={{
-        backgroundColor: "#F7F7F5",
+        backgroundColor: dark ? "#e8e9f3" : "#F7F7F5",
         padding: { xs: "2rem 1rem", md: "6rem 8rem" },
       }}
     >
       <Typography
         variant="h2"
         sx={{
-          fontSize: { xs: "1.8rem", md: "2.5rem" },
+          fontSize: { xs: "2.5rem", md: "4rem" },
           fontWeight: "bold",
-          textAlign: "center",
-          color: "#111827",
+          color: "#D4BBA0",
+          whiteSpace: "nowrap",
+          overflow: "hidden",
+          borderRight: "2px solid #111827",
+          width: "0",
+          margin: "0 auto",
           marginBottom: "3rem",
+          display: "block",
+          textAlign: "center",
+          animation:
+            "typing 2s steps(9) forwards, blink 0.7s step-end 3",
+          "@keyframes typing": {
+            "0%": { width: "0" },
+            "100%": { width: "13ch" }, 
+          },
+          "@keyframes blink": {
+            "0%": { borderColor: "#111827" },
+            "100%": { borderColor: "transparent" },
+          },
         }}
       >
-        Proyectos
+      Proyectos_
       </Typography>
 
       <Grid container spacing={4} justifyContent="center">

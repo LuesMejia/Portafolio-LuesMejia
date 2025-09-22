@@ -6,6 +6,7 @@ import Home from "./pages/Home";
 import Projects from "./pages/Projects";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
+import Conocimientos from "./pages/Conocimientos";  
 
 export default function App() {
   const [dark, setDark] = useState(false);
@@ -15,11 +16,13 @@ export default function App() {
 <Navbar dark={dark} setDark={setDark} />
 <main className="main-content">
   <Routes>
-    <Route path="/" element={<Home />} />
-    <Route path="/Proyectos" element={<Projects />} />
-    <Route path="/Acerca-De" element={<About />} />
-    <Route path="/Contacto" element={<Contact />} />
-  </Routes><Footer dark={dark} />
+    <Route path="/" element={<Home dark={dark} setDark={setDark}/>} />
+    <Route path="/Proyectos" element={<Projects dark={dark} setDark={setDark}/>} />
+    <Route path="/Acerca-De" element={<About dark={dark} setDark={setDark}/>} />
+    <Route path="/Contacto" element={<Contact dark={dark} setDark={setDark} />} />
+     <Route path="/Conocimientos" element={<Conocimientos dark={dark} setDark={setDark} />} />
+  </Routes>
+  <Footer dark={dark} />
 </main>
 
 
