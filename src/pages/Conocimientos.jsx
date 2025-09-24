@@ -40,8 +40,8 @@ export default function Skills({ dark }) {
     return (
         <Box
             sx={{
-                backgroundColor: dark ? "#111827" : "#F7F7F5",
-                color: dark ? "#F7F7F5" : "#111827",
+                backgroundColor: dark ? "#e8e9f3" : "#F7F7F5",
+                color: dark ? "#111827" : "#111827",
                 padding: { xs: "2rem 1rem", md: "6rem 8rem" },
             }}
         >
@@ -80,36 +80,36 @@ export default function Skills({ dark }) {
             </Typography>
             <Grid container spacing={3} mb={4}>
                 {skills.frontend.map((skill) => (
-                    <Grid item xs={12} sm={6} md={3} key={skill.name}>
+                    <Grid item size={{ xs: 12, sm: 6, md: 3 }} key={skill.name}>
                         <Card
                             sx={{
                                 textAlign: "center",
                                 borderRadius: 3,
                                 boxShadow: 2,
-                                backgroundColor: dark ? "#1F2937" : "#D4BBA0",
-                              height: 320, // Aumenté de 280 a 320
-        minWidth: 280, // Añadí un ancho mínimo
+                                backgroundColor: dark ? "#666666ff" : "#D4BBA0",
+                                height: 320, // Aumenté de 280 a 320
+                                minWidth: 280, // Añadí un ancho mínimo
                                 display: "flex",
                                 flexDirection: "column",
                             }}
-                        ><CardContent sx={{ 
-    flexGrow: 1,
-    display: "flex",
-    flexDirection: "column",
-    justifyContent: "space-between",
-    padding: "2rem", // Aumenté de 1.5rem a 2rem
-    "&:last-child": { paddingBottom: "2rem" }
-}}>
+                        ><CardContent sx={{
+                            flexGrow: 1,
+                            display: "flex",
+                            flexDirection: "column",
+                            justifyContent: "space-between",
+                            padding: "2rem", // Aumenté de 1.5rem a 2rem
+                            "&:last-child": { paddingBottom: "2rem" }
+                        }}>
 
                                 <Box>
                                     <img
                                         src={skill.icon}
                                         alt={skill.name}
                                         style={{
-                                             width: "90px", // Aumenté de 70px a 90px
-        height: "90px", // Aumenté de 70px a 90px
-        objectFit: "contain",
-        marginBottom: "1.5rem", // Aumenté el margen
+                                            width: "150px", 
+                                            height: "150px",
+                                            objectFit: "contain",
+                                            marginBottom: "1.5rem", // Aumenté el margen
                                         }}
                                     />
                                     <Typography variant="h6" sx={{ mb: 2 }}>{skill.name}</Typography>
@@ -144,20 +144,20 @@ export default function Skills({ dark }) {
             </Typography>
             <Grid container spacing={3} mb={4}>
                 {skills.backend.map((skill) => (
-                    <Grid item xs={12} sm={6} md={3} key={skill.name}>
+                    <Grid item size={{ xs: 12, sm: 6, md: 3 }} key={skill.name}>
                         <Card
                             sx={{
                                 textAlign: "center",
                                 borderRadius: 3,
                                 boxShadow: 2,
-                                backgroundColor: dark ? "#1F2937" : "#D4BBA0",
-                            height: 320, // Aumenté de 280 a 320
-        minWidth: 280, // Añadí un ancho mínimo
+                                backgroundColor: dark ? "#666666ff" : "#D4BBA0",
+                                height: 320, // Aumenté de 280 a 320
+                                minWidth: 280, // Añadí un ancho mínimo
                                 display: "flex",
                                 flexDirection: "column",
                             }}
                         >
-                            <CardContent sx={{ 
+                            <CardContent sx={{
                                 flexGrow: 1,
                                 display: "flex",
                                 flexDirection: "column",
@@ -170,10 +170,10 @@ export default function Skills({ dark }) {
                                         src={skill.icon}
                                         alt={skill.name}
                                         style={{
-                                             width: "90px", // Aumenté de 70px a 90px
-        height: "90px", // Aumenté de 70px a 90px
-        objectFit: "contain",
-        marginBottom: "1.5rem", // Aumenté el margen
+                                            width: "150px",
+                                            height: "150px", 
+                                            objectFit: "contain",
+                                            marginBottom: "1.5rem", // Aumenté el margen
                                         }}
                                     />
                                     <Typography variant="h6" sx={{ mb: 2 }}>{skill.name}</Typography>
@@ -208,20 +208,20 @@ export default function Skills({ dark }) {
             </Typography>
             <Grid container spacing={3}>
                 {skills.others.map((skill) => (
-                    <Grid item xs={12} sm={6} md={3} key={skill.name}>
+                    <Grid item size={{ xs: 12, sm: 6, md: 3 }} key={skill.name}>
                         <Card
                             sx={{
                                 textAlign: "center",
                                 borderRadius: 3,
                                 boxShadow: 2,
-                                backgroundColor: dark ? "#1F2937" : "#D4BBA0",
-                          height: 320, // Aumenté de 280 a 320
-        minWidth: 280, // Añadí un ancho mínimo
+                                backgroundColor: dark ? "#666666ff" : "#D4BBA0",
+                                height: 320, // Aumenté de 280 a 320
+                                minWidth: 280, // Añadí un ancho mínimo
                                 display: "flex",
                                 flexDirection: "column",
                             }}
                         >
-                            <CardContent sx={{ 
+                            <CardContent sx={{
                                 flexGrow: 1,
                                 display: "flex",
                                 flexDirection: "column",
@@ -234,10 +234,10 @@ export default function Skills({ dark }) {
                                         src={skill.icon}
                                         alt={skill.name}
                                         style={{
-                                            width: "90px", // Aumenté de 70px a 90px
-        height: "90px", // Aumenté de 70px a 90px
-        objectFit: "contain",
-        marginBottom: "1.5rem", // Aumenté el margen
+                                            width: "150px", 
+                                            height: "150px", 
+                                            objectFit: "contain",
+                                            marginBottom: "1.5rem", // Aumenté el margen
                                         }}
                                     />
                                     <Typography variant="h6" sx={{ mb: 2 }}>{skill.name}</Typography>

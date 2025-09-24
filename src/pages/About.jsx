@@ -30,7 +30,7 @@ export default function About({ dark }) {
             "typing 2s steps(9) forwards, blink 0.7s step-end 3",
           "@keyframes typing": {
             "0%": { width: "0" },
-            "100%": { width: "9ch" }, // número de caracteres de "Sobre Mí_"
+            "100%": { width: "10ch" }, // número de caracteres de "Sobre Mí_"
           },
           "@keyframes blink": {
             "0%": { borderColor: "#111827" },
@@ -38,7 +38,7 @@ export default function About({ dark }) {
           },
         }}
       >
-        Sobre Mí_
+        Acerca De_
       </Typography>
 
       {/* Contenido */}
@@ -50,7 +50,7 @@ export default function About({ dark }) {
         sx={{ maxWidth: "1000px", margin: "3rem auto 0" }}
       >
         {/* Texto */}
-        <Grid item xs={12} md={6}>
+        <Grid item size={{ xs: 12, md: 6 }}>
           <Typography
             sx={{
               color: "#111827",
@@ -111,7 +111,7 @@ export default function About({ dark }) {
         </Grid>
 
         {/* Imagen */}
-        <Grid item xs={12} md={6}>
+        <Grid item size={{ xs: 12, md: 6 }}>
           <Box
             component="img"
             src={Foto2}

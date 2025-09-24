@@ -41,7 +41,7 @@ const projectsSample = [
     description:
       "Desarrollo de página web con React y Material UI, integrando tableros de Power BI para la visualización interactiva de estadísticas del sector educativo, facilitando el acceso a información confiable y relevante sobre el país.",
     tags: ["React", "JS", "Material-UI", "Power BI"],
-    href: "#",
+    href: "https://siie.coned.gob.hn/",
     image: siie,
   },
 ];
@@ -72,7 +72,7 @@ export default function Projects({ dark, setDark }) {
             "typing 2s steps(9) forwards, blink 0.7s step-end 3",
           "@keyframes typing": {
             "0%": { width: "0" },
-            "100%": { width: "13ch" }, 
+            "100%": { width: "10ch" }, 
           },
           "@keyframes blink": {
             "0%": { borderColor: "#111827" },
@@ -85,7 +85,7 @@ export default function Projects({ dark, setDark }) {
 
       <Grid container spacing={4} justifyContent="center">
         {projectsSample.map((project) => (
-          <Grid item xs={12} sm={6} md={4} key={project.id}>
+          <Grid item size={{ xs: 12,sm:6, md: 3 }} key={project.id}>
             <ProjectCard project={project} />
           </Grid>
         ))}
