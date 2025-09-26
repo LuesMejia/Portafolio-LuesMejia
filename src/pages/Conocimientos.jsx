@@ -12,7 +12,7 @@ import GithubIcon from "../img/github.png";
 import FigmaIcon from "../img/figma.png";
 import PostmanIcon from "../img/postman.png";
 import PowerBiIcon from "../img/powerbi.png";
-
+import VercelIcon from "../img/vercel.png"; 
 
 
 const skills = {
@@ -33,6 +33,7 @@ const skills = {
         { name: "Figma", icon: FigmaIcon, level: 80 },
         { name: "Postman", icon: PostmanIcon, level: 95 },
         { name: "Power Bi", icon: PowerBiIcon, level: 90 },
+         { name: "Vercel", icon: VercelIcon, level: 90 },
     ],
 };
 
