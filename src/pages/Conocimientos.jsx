@@ -12,7 +12,7 @@ import GithubIcon from "../img/github.png";
 import FigmaIcon from "../img/figma.png";
 import PostmanIcon from "../img/postman.png";
 import PowerBiIcon from "../img/powerbi.png";
-import VercelIcon from "../img/vercel.png"; 
+import VercelIcon from "../img/Vercel.png"; 
 
 
 const skills = {
