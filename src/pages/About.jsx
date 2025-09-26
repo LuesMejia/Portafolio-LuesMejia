@@ -90,7 +90,7 @@ export default function About({ dark }) {
           </List>
 
           <Button
-            href="/CV.pdf"
+              href="https://drive.google.com/file/d/1rU3TPBDQ97AmC0kQ5c1AmgkatlPZ7kbY/view?usp=sharing"
             variant="outlined"
             sx={{
               border: "2px solid #111827",
